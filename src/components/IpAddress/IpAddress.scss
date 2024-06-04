@@ -1,0 +1,56 @@
+.ip-address {
+  display: flex;
+
+  min-height: 161px;
+  margin: 0 auto;
+  padding: 36px 0;
+
+  text-align: left;
+  list-style-type: none;
+
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 50px 50px -25px rgb(0 0 0 / 10%);
+
+  &__item {
+    position: relative;
+    width: 25%;
+    padding-inline: 32px;
+  }
+
+  &__item:not(:first-of-type)::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 1px;
+    height: 100%;
+
+    opacity: 0.15;
+    background: #000;
+  }
+
+  &__label {
+    font-family: Rubik, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(#2c2c2c, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  &__value {
+    margin: 12px 0 0;
+
+    font-family: Rubik, sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 115%;
+    color: #2c2c2c;
+    letter-spacing: -0.01em;
+  }
+}
