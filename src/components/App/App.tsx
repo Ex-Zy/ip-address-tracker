@@ -1,37 +1,50 @@
-import { useState } from 'react'
-
-import reactLogo from '../../assets/react.svg'
-
-import viteLogo from '/vite.svg'
 import './App.scss'
+import React from 'react'
+
+import { useIpAddress } from '../../hooks/useIpAddress.ts'
+import { HTMLFormElementWithSearch } from '../../types.ts'
+import { normalizeFormToUrlParams } from '../../utils.ts'
+import { AppHeader } from '../AppHeader/AppHeader.tsx'
+
+// const ERROR = {
+//   code: 422,
+//   messages: 'Input correct IPv4 or IPv6 address.',
+// }
+//
+// const DATA = {
+//   ip: '176.98.23.132',
+//   location: {
+//     country: 'UA',
+//     region: 'Vinnytsya Oblast',
+//     city: 'Kalynivka',
+//     lat: 49.46129,
+//     lng: 28.51541,
+//     postalCode: '',
+//     timezone: '+03:00',
+//     geonameId: 707155,
+//   },
+//   as: {
+//     asn: 49889,
+//     name: 'CRYSTAL-AS',
+//     route: '176.98.23.0/24',
+//     domain: 'utelecom.com.ua',
+//     type: '',
+//   },
+//   isp: '',
+// }
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { data, error, loading, fetchIpAddress } = useIpAddress()
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElementWithSearch>) => {
+    event.preventDefault()
+
+    void fetchIpAddress(normalizeFormToUrlParams(event))
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button
-          onClick={() => {
-            setCount((count) => count + 1)
-          }}
-        >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <AppHeader loading={loading} address={data} error={error} onSubmit={handleSubmit} />
     </>
   )
 }
