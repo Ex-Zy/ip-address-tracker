@@ -1,3 +1,21 @@
+@mixin font($fs: 18px, $fw: 400, $lh: 100%) {
+  font-family: Rubik, sans-serif;
+  font-size: $fs;
+  font-weight: $fw;
+  font-style: normal;
+  line-height: $lh;
+}
+
+@mixin box-spacing($p: 0, $m: 0) {
+  margin: $m;
+  padding: $p;
+}
+
+@mixin size($w: auto, $h: auto) {
+  width: $w;
+  height: $h;
+}
+
 @mixin flex-center {
   display: flex;
   align-items: center;

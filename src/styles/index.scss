@@ -13,11 +13,9 @@
 body {
   --moz-osx-font-smoothing: grayscale;
 
-  font-family: Rubik, sans-serif;
-  font-size: 18px;
+  @include font($fs: 18px, $fw: 400, $lh: 100%);
+  
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -26,12 +24,9 @@ body {
     font-size: 26px;
   }
 
-  margin: 0;
+  @include font($fs: 32px, $fw: 500, $lh: 94%);
 
-  font-family: Rubik, sans-serif;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 94%;
+  margin: 0;
   color: #fff;
   letter-spacing: -0.01em;
 }

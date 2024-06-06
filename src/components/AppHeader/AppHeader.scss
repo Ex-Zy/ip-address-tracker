@@ -5,30 +5,26 @@
   background: #5a76dd url("../../assets/pattern-bg-desktop.png") no-repeat center top / cover;
 
   &__in {
+    @include box-spacing($m: 0 auto, $p: 32px 20px 0);
+
     max-width: 1150px;
-    margin: 0 auto;
-    padding: 32px 20px 0;
+
   }
 }
 
 
 .app-header-error,
 .app-header-loading {
+  @include flex-center;
+  @include font($fs: 26px, $fw: 500, $lh: 94%);
+  @include box-spacing($m: 0 auto, $p: 0 32px);
+
   position: relative;
   z-index: 500;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   height: 161px;
-  margin: 0 auto;
-  padding: 0 32px;
 
-  font-family: Rubik, sans-serif;
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 94%;
   text-align: left;
 
   background: #fff;
