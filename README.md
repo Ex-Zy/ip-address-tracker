@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Frontend Mentor - IP address tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Design preview for the IP address tracker coding challenge](./preview.jpg)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## The challenge
 
-## Expanding the ESLint configuration
+Your challenge is to build out this IP Address Tracker app and get it looking as close to the design as possible. To get the IP Address locations, you'll be using the [IP Geolocation API by IPify](https://geo.ipify.org/). To generate the map, we recommend using [LeafletJS](https://leafletjs.com/).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Your users should be able to:
 
-- Configure the top-level `parserOptions` property like this:
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements on the page
+- See their own IP address on the map on the initial page load
+- Search for any IP addresses or domains and see the key information and location
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Links
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Live Site URL: [Demo](https://ip-address-tracker-amber-two.vercel.app/)
+
+### Built with
+
+- [React](https://react.dev/)
+- [Scss](https://sass-lang.com/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [LeafletJS](https://leafletjs.com/)
+- [IP Geolocation API by IPify](https://geo.ipify.org/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Stylelint](https://stylelint.io/)
+
+## Author
+
+- Website - [nagornykh.me](https://nagornykh.me/)
+- Frontend Mentor - [@Ex-Zy](https://www.frontendmentor.io/profile/Ex-Zy)
