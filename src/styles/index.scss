@@ -22,6 +22,10 @@ body {
 }
 
 .title {
+  @include mobile {
+    font-size: 26px;
+  }
+
   margin: 0;
 
   font-family: Rubik, sans-serif;
@@ -31,5 +35,3 @@ body {
   color: #fff;
   letter-spacing: -0.01em;
 }
-
-

@@ -1,4 +1,10 @@
 .ip-address {
+
+  @include mobile {
+    flex-direction: column;
+    padding: 26px 24px;
+  }
+
   position: relative;
   z-index: 500;
 
@@ -16,28 +22,49 @@
   box-shadow: 0 50px 50px -25px rgb(0 0 0 / 10%);
 
   &__item {
+    @include mobile {
+      width: 100%;
+      padding-inline: 0;
+      text-align: center;
+    }
+
     position: relative;
     width: 25%;
     padding-inline: 32px;
   }
 
-  &__item:not(:first-of-type)::after {
-    content: "";
+  &__item:not(:first-of-type) {
+    @include mobile {
+      margin: 24px 0 0;
+    }
 
-    position: absolute;
-    top: 0;
-    left: 0;
+    &::after {
 
-    display: block;
+      @include mobile {
+        display: none;
+      }
 
-    width: 1px;
-    height: 100%;
+      content: "";
 
-    opacity: 0.15;
-    background: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+
+      width: 1px;
+      height: 100%;
+
+      opacity: 0.15;
+      background: #000;
+    }
   }
 
   &__label {
+    @include mobile {
+      font-size: 10px;
+    }
+
     font-family: Rubik, sans-serif;
     font-size: 12px;
     font-weight: 700;
@@ -47,6 +74,11 @@
   }
 
   &__value {
+    @include mobile {
+      margin: 4px 0 0;
+      font-size: 20px;
+    }
+
     margin: 12px 0 0;
 
     font-family: Rubik, sans-serif;

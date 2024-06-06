@@ -1,13 +1,12 @@
 .app-geolocation-map {
   height: var(--map-height);
+  min-height: 530px;
 }
 
 .app-geolocation-map-loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 
   height: var(--map-height);
-
+  min-height: 530px;
   background: #cdcdcd9c;
 }
