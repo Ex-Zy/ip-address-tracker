@@ -29,7 +29,7 @@ export const transformUrlParamsToFullUrl = (params: InputAddressParams) => {
     fullUrl += `&${queryStr}`
   }
 
-  return fullUrl + 'dsadas'
+  return fullUrl
 }
 
 export const transformErrorToSingleString = (error: ErrorData | string | null): string => {

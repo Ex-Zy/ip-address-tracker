@@ -1,0 +1,13 @@
+.app-geolocation-map {
+  height: var(--map-height);
+}
+
+.app-geolocation-map-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: var(--map-height);
+
+  background: #cdcdcd9c;
+}

@@ -1,5 +1,9 @@
 @import 'normalize.css';
 
+:root {
+  --map-height: calc(100vh - 280px);
+}
+
 *,
 *::before,
 *::after {
