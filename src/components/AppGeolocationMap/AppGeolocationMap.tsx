@@ -1,12 +1,12 @@
 import './AppGeolocationMap.scss'
 import 'leaflet/dist/leaflet.css'
 
-import React from 'react'
+import type React from 'react'
 import { MapContainer, Marker, TileLayer } from 'react-leaflet'
 import { ScaleLoader } from 'react-spinners'
 
 import { IconMarker } from './IconMarker.ts'
-import { Address, ErrorData } from '../../types.ts'
+import type { Address, ErrorData } from '../../types.ts'
 
 interface Props {
   address: Address | null

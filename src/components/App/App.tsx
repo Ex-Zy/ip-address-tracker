@@ -1,8 +1,8 @@
 import './App.scss'
-import React from 'react'
+import type React from 'react'
 
 import { useIpAddress } from '../../hooks/useIpAddress.ts'
-import { HTMLFormElementWithSearch } from '../../types.ts'
+import type { HTMLFormElementWithSearch } from '../../types.ts'
 import { normalizeFormToUrlParams } from '../../utils.ts'
 import { AppGeolocationMap } from '../AppGeolocationMap/AppGeolocationMap.tsx'
 import { AppHeader } from '../AppHeader/AppHeader.tsx'

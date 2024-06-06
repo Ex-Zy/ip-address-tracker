@@ -1,7 +1,7 @@
 import './IpAddress.scss'
-import React from 'react'
+import type React from 'react'
 
-import { Address } from '../../types.ts'
+import type { Address } from '../../types.ts'
 
 interface Props {
   address: Address

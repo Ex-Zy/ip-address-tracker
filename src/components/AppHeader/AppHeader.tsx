@@ -1,7 +1,7 @@
 import './AppHeader.scss'
-import React from 'react'
+import type React from 'react'
 
-import { Address, ErrorData, HTMLFormElementWithSearch } from '../../types.ts'
+import type { Address, ErrorData, HTMLFormElementWithSearch } from '../../types.ts'
 import { transformErrorToSingleString } from '../../utils.ts'
 import { IpAddress } from '../IpAddress/IpAddress.tsx'
 import { SearchForm } from '../SearchForm/SearchForm.tsx'

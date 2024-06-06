@@ -1,8 +1,8 @@
 import './SearchForm.scss'
-import React from 'react'
+import type React from 'react'
 import { ClipLoader } from 'react-spinners'
 
-import { HTMLFormElementWithSearch } from '../../types.ts'
+import type { HTMLFormElementWithSearch } from '../../types.ts'
 
 interface Props {
   loading: boolean

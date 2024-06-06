@@ -1,4 +1,4 @@
-import { Address, ApiResponse, ErrorApiResponse, InputAddressParams, SuccessApiResponse } from '../types.ts'
+import type { Address, ApiResponse, ErrorApiResponse, InputAddressParams, SuccessApiResponse } from '../types.ts'
 import { isApiError, transformUrlParamsToFullUrl } from '../utils.ts'
 
 export const ApiAddressService = {

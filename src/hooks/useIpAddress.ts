@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { ApiAddressService } from '../services/ApiAddressService.ts'
-import { Address, ErrorData, InputAddressParams } from '../types.ts'
+import type { Address, ErrorData, InputAddressParams } from '../types.ts'
 
 export const useIpAddress = () => {
   const [loading, setLoading] = useState(true)

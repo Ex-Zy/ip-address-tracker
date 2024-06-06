@@ -1,6 +1,6 @@
-import React from 'react'
+import type React from 'react'
 
-import { ErrorData, HTMLFormElementWithSearch, InputAddressParams } from './types.ts'
+import type { ErrorData, HTMLFormElementWithSearch, InputAddressParams } from './types.ts'
 
 export const isApiError = (err: unknown): err is ErrorData => {
   return typeof err === 'object' && err !== null && 'code' in err && 'messages' in err
